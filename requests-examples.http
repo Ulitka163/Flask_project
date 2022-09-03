@@ -1,0 +1,32 @@
+@baseUrl = http://127.0.0.1:5000
+
+# получение пользователя
+GET {{baseUrl}}/users/1
+Content-Type: application/json
+
+###
+
+# создание пользователя
+POST {{baseUrl}}/users/
+Content-Type: application/json
+Authorization: Token 902ef055a9ac93f18327f1f9c45ab059f1a62c7d
+
+{
+  "username": "user_1",
+  "password": "1222"
+}
+
+###
+
+# попытка поменять пользователя
+PATCH {{baseUrl}}/users/1/
+Content-Type: application/json
+Authorization: Token 902ef055a9ac93f18327f1f9c45ab059f1a62c7d
+
+{
+  "username": "user1",
+}
+
+###
+
+
